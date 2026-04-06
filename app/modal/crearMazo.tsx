@@ -1,11 +1,10 @@
-import '../global.css'
 import { View, Text } from 'react-native'
 import React from 'react'
 
-export default function _layout() {
+export default function crearMazo() {
   return (
     <View>
-      <Text>_layout</Text>
+      <Text>crearMazo</Text>
     </View>
   )
 }
