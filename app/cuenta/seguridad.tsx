@@ -1,10 +1,10 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-export default function mazos() {
+export default function seguridad() {
   return (
     <View>
-      <Text>mazos</Text>
+      <Text>seguridad</Text>
     </View>
   )
 }

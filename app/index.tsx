@@ -22,7 +22,7 @@ export default function index() {
     >
       <View className='flex-1 items-center justify-center'>
         <View className='p-8 rounded-[32px] mb-9' style={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}>
-          <Icon source={"home"} color={styles.colorTexto.color} size={100} />
+          <Icon source={"home"} color={styles.colorTexto.color} size={100} /> {/* cambiar */}
         </View>
 
         <Text style={[styles.colorTexto, { fontWeight: "700" }]} variant='displayMedium'>

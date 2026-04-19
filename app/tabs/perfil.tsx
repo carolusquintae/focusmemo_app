@@ -1,6 +1,6 @@
 import { ScrollView, Switch, View } from 'react-native'
 import React, { useState } from 'react'
-import { Button, Avatar, Text, Divider, List } from 'react-native-paper'
+import { Button, Avatar, Text, Divider, List, IconButton } from 'react-native-paper'
 import { useRouter } from 'expo-router'
 
 export default function perfil() {
@@ -20,21 +20,29 @@ export default function perfil() {
         </View>
         
         <View className="mb-6">
-          <Text className={estiloTituloSeccion}>
-            Ajustes de la cuenta
-          </Text>
+          <Text className={estiloTituloSeccion}>Ajustes de la cuenta</Text>
 
           <View className={estiloContenedorSeccion}>
             <List.Item
               title="Editar Perfil"
               left={props => <List.Icon {...props} icon="account-cog-outline" />}
-              right={props => <List.Icon {...props} icon="chevron-right" />}
+              right={props => <IconButton 
+                                {...props} 
+                                icon="chevron-right" 
+                                onPress={() => router.push("/cuenta/editar")}
+                              />
+                    }
             />
             <Divider className={estiloDivider} />
             <List.Item
               title="Seguridad"
               left={props => <List.Icon {...props} icon="lock-outline" />}
-              right={props => <List.Icon {...props} icon="chevron-right" />}
+              right={props => <IconButton 
+                                {...props} 
+                                icon="chevron-right" 
+                                onPress={() => router.push("/cuenta/seguridad")}
+                              />
+                    }
             />
           </View>
         </View>
@@ -48,18 +56,23 @@ export default function perfil() {
             <List.Item
               title="Modo Oscuro"
               left={props => <List.Icon {...props} icon="theme-light-dark" />}
-              right={() => <Switch 
-                             value={modoOscuroActivado} 
-                             onValueChange={() => setModoOscuroActivado(!modoOscuroActivado)} 
-                           />
+              right={props => <Switch 
+                                {...props}
+                                value={modoOscuroActivado} 
+                                onValueChange={() => setModoOscuroActivado(!modoOscuroActivado)} 
+                              />
                     }
             />
-
             <Divider className={estiloDivider} />
             <List.Item
               title="Notificaciones"
               left={props => <List.Icon {...props} icon="bell-outline" />}
-              right={props => <List.Icon {...props} icon="chevron-right" />}
+              right={props => <IconButton 
+                                {...props} 
+                                icon="chevron-right" 
+                                onPress={() => router.push("/cuenta/notificaciones")} 
+                              />
+                    }
             />
           </View>
         </View>

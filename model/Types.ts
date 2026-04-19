@@ -1,82 +1,82 @@
-type Mazo = {
-  id_mazo: number;
-  id_usuario: number;
+export type Mazo = {
+  idMazo: number;
+  idUsuario: number;
   nombre: string;
   descripcion?: string | null;
   color?: string | null;
-  fecha_creacion?: Date | null;
+  fechaCreacion?: Date | null;
 }
 
-type Mazos = Array<Mazo>
+export type Mazos = Array<Mazo>
 
-type PartidaMinijuego = {
-  id_partida: number;
-  id_usuario: number;
+export type PartidaMinijuego = {
+  idPartida: number;
+  idUsuario: number;
   puntuacion?: number | null;
   aciertos?: number | null;
   errores?: number | null;
   fecha?: Date | null;
 }
 
-type ProgresoTarjeta = {
-  id_progreso: number;
-  id_usuario: number;
-  id_tarjeta: number;
+export type ProgresoTarjeta = {
+  idProgreso: number;
+  idUsuario: number;
+  idTarjeta: number;
   repeticion?: number | null;
   intervalo?: number | null;
-  ease_factor?: number | null;
-  proxima_revision?: Date | null;
-  ultima_revision?: Date | null;
+  easeFactor?: number | null;
+  proximaRevision?: Date | null;
+  ultimaRevision?: Date | null;
 }
 
-type ResultadoTarjeta = {
-  id_resultado: number;
-  id_usuario: number;
-  id_tarjeta: number;
-  calidad_respuesta: number;
+export type ResultadoTarjeta = {
+  idResultado: number;
+  idUsuario: number;
+  idTarjeta: number;
+  calidadRespuesta: number;
   fecha?: Date | null;
 }
 
-type SesionEstudio = {
-  id_sesion: number;
-  id_usuario: number;
-  fecha_inicio?: Date | null;
-  fecha_fin?: Date | null;
-  tarjetas_estudiadas?: number | null;
+export type SesionEstudio = {
+  idSesion: number;
+  idUsuario: number;
+  fechaInicio?: Date | null;
+  fechaFin?: Date | null;
+  tarjetasEstudiadas?: number | null;
   aciertos?: number | null;
   errores?: number | null;
 }
 
-type Suscripcion = {
-  id_suscripcion: number;
-  id_usuario: number;
-  tipo_plan?: string | null;
-  fecha_inicio?: Date | null;
-  fecha_fin?: Date | null;
+export type Suscripcion = {
+  idSuscripcion: number;
+  idUsuario: number;
+  tipoPlan?: string | null;
+  fechaInicio?: Date | null;
+  fechaFin?: Date | null;
   estado?: string | null;
 }
 
-type Suscripciones = Array<Suscripcion>
+export type Suscripciones = Array<Suscripcion>
 
-type Tarjeta = {
-  id_tarjeta: number,
-  id_mazo: number,
+export type Tarjeta = {
+  idTarjeta: number,
+  idMazo: number,
   pregunta: string,
   respuesta: string,
-  fecha_creacion?: Date
+  fechaCreacion?: Date
   activa?: boolean
 }
 
-type Tarjetas = Array<Tarjeta>
+export type Tarjetas = Array<Tarjeta>
 
-type Usuario = {
-  id_usuario: number,
+export type Usuario = {
+  idUsuario: number,
   nombre: string,
   email: string,
-  password_hash: string,
-  fecha_registro?: Date,
+  passwordHash: string,
+  fechaRegistro?: Date,
   premium?: boolean,
-  fecha_fin_premium?: Date | null
+  fechaFinPremium?: Date | null
 }
 
-type Usuarios = Array<Usuario>
+export type Usuarios = Array<Usuario>

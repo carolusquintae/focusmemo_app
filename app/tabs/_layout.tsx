@@ -40,6 +40,7 @@ export default function _layout() {
         name="perfil"
         options={{
           title: 'Perfil',
+          headerShown: false,
           tabBarIcon: ({ color, size }) => <Icon source={'account'} size={size} color={color} />,
         }}
       />

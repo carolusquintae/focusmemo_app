@@ -1,10 +1,25 @@
-import { View, Text } from 'react-native'
+import { View } from 'react-native'
 import React from 'react'
+import { useLocalSearchParams } from 'expo-router'
+import { Divider, Text } from 'react-native-paper'
 
 export default function error() {
+  
+  const {mensaje, descripcion} = useLocalSearchParams<{mensaje: string, descripcion: string}>()
+
   return (
-    <View>
-      <Text>error</Text>
+    <View className='gap-3'>
+      <Text variant='titleLarge'>Se ha producido un error</Text>
+      <Text variant='bodyLarge'>{mensaje}</Text>
+      {
+        descripcion !== "" && (
+          <View>
+            <Divider />
+            <Text variant='titleLarge'>Detalle del error</Text>
+            <Text variant='bodyLarge'>{descripcion}</Text>
+          </View>
+        )
+      }
     </View>
   )
 }
