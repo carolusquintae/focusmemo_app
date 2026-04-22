@@ -28,7 +28,7 @@ export default function inicio() {
 
       <BotonGrande 
         modo={"contained"} 
-        onPress={() => router.push("/estudio/resultados")} 
+        onPress={() => router.push("/estudio/estudiar")} 
         texto="Estudia ahora"
       />
 
