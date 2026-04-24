@@ -123,14 +123,14 @@ export default function memorizaGame() {
       <View className='flex-row flex-wrap justify-center gap-4'>
         {
           preguntaActual.opciones.map(item => <Respuesta
-                                          key={item.letra}
-                                          opcion={item.letra}
-                                          respuesta={item.texto}
-                                          esCorrecta={item.correcta}
-                                          revelar={respondido}
-                                          alSeleccionar={manejarSeleccion}
-                                        />
-                               )
+                                                key={item.letra}
+                                                opcion={item.letra}
+                                                respuesta={item.texto}
+                                                esCorrecta={item.correcta}
+                                                revelar={respondido}
+                                                alSeleccionar={manejarSeleccion}
+                                              />
+                                     )
         }
       </View>
       
