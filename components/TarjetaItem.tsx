@@ -40,7 +40,7 @@ export default function TarjetaItem({tarjeta}: TarjetaItemProps) {
         <Button 
           mode={"contained-tonal"} 
           icon={"pencil"} 
-          onPress={() => router.push("/modal/editarTarjeta")}
+          onPress={() => router.push("/estudio/editarTarjeta")}
         >Editar</Button>
 
         <Button 

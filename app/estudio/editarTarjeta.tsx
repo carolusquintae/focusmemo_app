@@ -2,12 +2,14 @@ import { StyleSheet } from 'react-native'
 import React, { useState } from 'react'
 import { Button, Text, TextInput } from 'react-native-paper'
 import { SafeAreaView } from 'react-native-safe-area-context'
+import { useRouter } from 'expo-router'
 
 export default function editarTarjeta() {
   
   const [editar, setEditar] = useState(false)
   const [pregunta, setPregunta] = useState("")
   const [respuesta, setRespuesta] = useState("")
+  const router = useRouter()
 
   return (
     <SafeAreaView>
@@ -34,7 +36,7 @@ export default function editarTarjeta() {
 
       <Button 
         mode={"contained"} 
-        onPress={() => setEditar(!editar)}
+        onPress={() => router.back()}
         style={{ width: "90%", alignSelf: "center" }}
       >{editar ? "Actualizar" : "Crear"}</Button>
     </SafeAreaView>

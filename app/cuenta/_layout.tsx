@@ -30,6 +30,13 @@ export default function _layout() {
           title: 'Seguridad' 
         }} 
       />
+
+      <Stack.Screen 
+        name="cambiarContrasena" 
+        options={{ 
+          title: 'Cambiar contraseña' 
+        }} 
+      />
     </Stack>
   )
 }
